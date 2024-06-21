@@ -30,6 +30,7 @@ namespace BLETest
             string MAC = "a8:10:87:6a:f7:e8";
 
             bluetooth = new BluetoothLECode(_serviceGuid, _writeCharacteristicGuid, _notifyCharacteristicGuid);
+            //bluetooth.StartBleDeviceWatcher();
             bluetooth.ValueChanged += Bluetooth_ValueChanged;
             bluetooth.SelectDeviceFromIdAsync(MAC);
         }
